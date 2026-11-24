@@ -1,0 +1,12 @@
+[project]
+name = "ptop"
+requires-python = ">= 3.11.10"
+dependencies = ["click", "rich"]
+dynamic = ["version"]
+
+[project.scripts]
+ptop = "ptop.main:main"
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
