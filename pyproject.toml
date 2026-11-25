@@ -1,7 +1,7 @@
 [project]
 name = "ptop"
 requires-python = ">= 3.11.10"
-dependencies = ["click", "rich"]
+dependencies = ["blessed", "click", "psutil", "rich"]
 dynamic = ["version"]
 
 [project.scripts]

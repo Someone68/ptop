@@ -1,3 +1,5 @@
 from rich.console import Console
+from blessed import Terminal
 
-console = Console();
+console = Console()
+term = Terminal()
