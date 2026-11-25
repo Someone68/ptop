@@ -27,6 +27,7 @@ class Cpu:
         self.used_percentage: float = cpu_percent(interval=None)
         self.temperature: float | None = None
         self.lock = threading.Lock()
+        self._stop = threading.Event()
 
     def poll(self):
         while True:
@@ -35,4 +36,4 @@ class Cpu:
             with self.lock:
                 self.used_percentage = percent
                 self.temperature = temp
-            time.sleep(1)
+            self._stop.wait(1)
