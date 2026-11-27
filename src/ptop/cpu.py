@@ -1,5 +1,6 @@
 import time
 import platform
+from typing import Callable
 from rich import print
 from rich.table import Table
 from rich.live import Live
